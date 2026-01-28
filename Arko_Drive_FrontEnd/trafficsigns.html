@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArkoDrive — Ճանապարհային նշաններ</title>
+  <link rel="icon" href="images/DRF API (1).PNG" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/DRF API (1).PNG" alt="Arko Drive">
+      </a>
+    </div>
+
+    <!-- Гамбургер -->
+    <button class="hamburger" aria-label="Открыть меню" type="button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Контейнер меню -->
+    <nav class="nav-container">
+      <ul class="menu">
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="theory.html">Տեսական քննություններ</a></li>
+        <li><a href="tests.html">Թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային Նշաններ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="signs-page">
+    <h1 class="page-title">Ճանապարհային նշաններ</h1>
+
+    <!-- Плавающий “таб-бар” для 8 групп -->
+    <nav class="groups-nav" id="groupsNav">
+      <ul>
+        <li><a href="#warning">1. Նախազգուշացնող</a></li>
+        <li><a href="#advantage">2. Առավելության</a></li>
+        <li><a href="#prohibitory">3. Արգելող</a></li>
+        <li><a href="#prescriptive">4. Թելադրող</a></li>
+        <li><a href="#special">5. Հատուկ թելադրանքի</a></li>
+        <li><a href="#information">6. Տեղեկատվության</a></li>
+        <li><a href="#service">7. Սպասարկման</a></li>
+        <li><a href="#additional">8. Լրացուցիչ տեղեկություն</a></li>
+      </ul>
+    </nav>
+
+    <!-- ======= ГРУППА 2. Առավելության ======= -->
+    <section id="advantage" class="sign-group">
+      <h2>2. Առավելության նշաններ</h2>
+
+      <!-- Таблица-грид: номер / картинка / название -->
+      <div class="sign-table head">
+        <span class="num">Նշանի համարը</span>
+        <span class="pic">Նկարը</span>
+        <span class="title">Անվանումը</span>
+      </div>
+
+      <!-- Один знак -->
+      <div class="sign-table">
+        <span class="num">2.1</span>
+        <span class="pic">
+          <img src="images/signs/2-1.png" alt="Գլխավոր ճանապարհ">
+        </span>
+        <span class="title">«Գլխավոր ճանապարհ»</span>
+      </div>
+
+      <div class="sign-table">
+        <span class="num">2.2</span>
+        <span class="pic"><img src="images/signs/2-2.png" alt="Երկրորդական ճանապարհ"></span>
+        <span class="title">«Երկրորդական ճանապարհ»</span>
+      </div>
+
+      <!-- … сюда вставьте остальные .sign-table … -->
+    </section>
+
+    <!-- ======= ГРУППА 3 (пустая секция) ======= -->
+    <section id="prohibitory" class="sign-group">
+      <h2>3. Արգելող նշաններ</h2>
+      <!-- вставьте .sign-table блоки -->
+    </section>
+
+    <!-- … остальные группы аналогично … -->
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="links">
+      <ul>
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+        <li><a href="theory.html">Տեսական դասընթացներ</a></li>
+      </ul>
+      <ul>
+        <li><a href="tests.html">Քննական թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային նշաներ</a></li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="copy">
+      <p>Հարցաշարը վերցված է 
+        <a href="https://www.police.am/" target="_blank" rel="noopener">Police.am</a> կայքից
+      </p>
+      <p>Բոլոր իրավունքները պաշտպանված են</p>
+    </div>
+  </footer>
+
+  <!-- JS: фиксируем таб-бар и подсвечиваем активную вкладку -->
+  <script>
+    // Гамбургер
+    document.addEventListener('DOMContentLoaded', function() {
+      const burger = document.querySelector('.hamburger');
+      const navCont = document.querySelector('.nav-container');
+
+      burger.addEventListener('click', function() {
+        navCont.classList.toggle('open');
+        burger.classList.toggle('open');
+      });
+    });
+
+    // Sticky tabs & подсветка активного пункта
+    const nav       = document.getElementById('groupsNav');
+    const navOffset = nav.offsetTop;
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('sticky', window.pageYOffset >= navOffset);
+    });
+
+    const links = nav.querySelectorAll('a');
+    const sections = [...document.querySelectorAll('.sign-group')];
+    const opts = { rootMargin: '-30% 0px -60% 0px' };
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.toggle('current', l.getAttribute('href').slice(1) === entry.target.id));
+        }
+      });
+    }, opts).observeAll = sections.forEach.bind(sections);
+  </script>
+</body>
+</html>
+

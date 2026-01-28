@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArkoDrive</title>
+  <link rel="icon" href="images/DRF API (1).PNG" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/DRF API (1).PNG" alt="Arko Drive">
+      </a>
+    </div>
+
+    <!-- Кнопка-гамбургер -->
+    <button class="hamburger" aria-label="Открыть меню" type="button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Контейнер для меню -->
+    <nav class="nav-container">
+      <ul class="menu">
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="theory.html">Տեսական քննություններ</a></li>
+        <li><a href="tests.html">Թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային Նշաններ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="images/Дизайн без названия (14) 1.png" alt="Driving">
+    <div class="overlay">
+      <h1>ՍՏԱՑԵՔ ՁԵՐ ՎԱՐՈՐԴԱԿԱՆ ԻՐԱՎՈՒՆՔԸ ՄԵԶ ՄՈՏ</h1>
+    </div>
+  </section>
+
+  <!-- Почему нас выбирают -->
+  <section class="section-why">
+    <h2>Ինչո՞ւ սովորել մեզ մոտ</h2>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="icon"><img src="images/b6a9f778-6597-4f2c-9836-5f32eca0074e 2.png" alt=""></div>
+        <div class="text">Ուսուցման ընթացքում ցուցաբերվում է անհատական մոտեցում:</div>
+      </div>
+      <div class="feature-item">
+        <div class="icon"><img src="images/Group 1.png" alt=""></div>
+        <div class="text">Տեսական դասընթացները անցկացվում են ինչպես անհատական 
+                     այնպես էլ  խմբային տարբերակով։</div>
+      </div>
+      <div class="feature-item">
+        <div class="icon"><img src="images/image 1.png" alt=""></div>
+        <div class="text">Գործնական դասընթացները անցկացվում են քննական մեքենաներով։</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Сетка карточек на фоне машины -->
+  <section class="section-grid">
+    <img class="bg" src="images/Black and White Minimalist Brand Guidelines Presentation (1) 1.png" alt="Car background">
+    <div class="grid">
+      <a href="tests.html" class="card">
+        <div class="icon"><img src="images/Test.png" alt="Թեստեր"></div>
+        <div class="label">Թեստեր</div>
+      </a>
+      <a href="theory.html" class="card">
+        <div class="icon"><img src="images/harcashar.png" alt="Տեսական դասընթացներ"></div>
+        <div class="label">Տեսական քննության հարցաշարեր</div>
+      </a>
+      <a href="trafficsigns.html" class="card">
+        <div class="icon"><img src="images/Nshan.png" alt="Ճանապարհային նշաններ"></div>
+        <div class="label">Ճանապարհային նշաններ</div>
+      </a>
+      <a href="packages.html" class="card">
+        <div class="icon"><img src="images/Patet.png" alt="Փաստաթղթեր"></div>
+        <div class="label">Փաթեթներ</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="links">
+      <ul>
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+        <li><a href="theory.html">Տեսական դասընթացներ</a></li>
+      </ul>
+      <ul>
+        <li><a href="tests.html">Քննական թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային նշաներ</a></li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="copy">
+      <p>Հարցաշարը վերցված է 
+        <a href="https://www.police.am/" target="_blank" rel="noopener">Police.am</a> կայքից
+      </p>
+      <p>Բոլոր իրավունքները պաշտպանված են</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript для переключения гамбургера -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const burger = document.querySelector('.hamburger');
+      const navCont = document.querySelector('.nav-container');
+
+      burger.addEventListener('click', function() {
+        navCont.classList.toggle('open');
+        burger.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

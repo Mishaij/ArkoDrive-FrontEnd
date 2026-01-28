@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArkoDrive — Փաթեթներ</title>
+  <link rel="icon" href="images/DRF API (1).PNG" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/DRF API (1).PNG" alt="Arko Drive">
+      </a>
+    </div>
+
+    <!-- Гамбургер -->
+    <button class="hamburger" aria-label="Открыть меню" type="button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Контейнер меню -->
+    <nav class="nav-container">
+      <ul class="menu">
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="theory.html">Տեսական քննություններ</a></li>
+        <li><a href="tests.html">Թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային Նշաններ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Секция: Տեսական + Գործնական Փաթեթներ -->
+    <section class="section-title">
+      <h2>Տեսական + Գործնական Փաթեթներ</h2>
+    </section>
+    <section class="packages-grid">
+      <div class="package-card">
+        <div class="price">75 000 ֏</div>
+        <div class="name">«Ամբողջական» (խմբային)</div>
+        <ul class="features">
+          <li><img src="images/done_check_mark_icon_175525.webp" alt="">24 դ/ժ տեսական</li>
+          <li><img src="images/done_check_mark_icon_175525.webp" alt="">10 ժ գործնական</li>
+        </ul>
+        <!-- <button class="btn">Գնել</button> -->
+      </div>
+      <!-- Repeat .package-card blocks as needed -->
+    </section>
+
+    <!-- Սекция: Տեսական Փաթեթներ -->
+    <section class="section-title">
+      <h2>Տեսական Փաթեթներ</h2>
+    </section>
+    <section class="packages-grid">
+      <div class="package-card">
+        <div class="price">40 000 ֏</div>
+        <div class="name">Տեսական (խմբային)</div>
+        <ul class="features">
+          <li><img src="images/done_check_mark_icon_175525.webp" alt="">24 դ/ժ տեսական</li>
+        </ul>
+        <!-- <button class="btn">Գնել</button> -->
+      </div>
+      <!-- … -->
+    </section>
+
+    <!-- Սекция: Գործնական Փաթեթներ -->
+    <section class="section-title">
+      <h2>Գործնական Փաթեթներ</h2>
+    </section>
+    <section class="packages-grid">
+      <div class="package-card">
+        <div class="price">47 000 ֏</div>
+        <div class="name">«Դրայվ»</div>
+        <ul class="features">
+          <li><img src="images/done_check_mark_icon_175525.webp" alt="">10 ժ գործնական</li>
+          <li><img src="images/done_check_mark_icon_175525.webp" alt="">10 ժ գործնական</li>
+        </ul>
+        <!-- <button class="btn">Գնել</button> -->
+      </div>
+      <!-- … -->
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="links">
+      <ul>
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+        <li><a href="theory.html">Տեսական դասընթացներ</a></li>
+      </ul>
+      <ul>
+        <li><a href="tests.html">Քննական թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային նշաներ</a></li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="copy">
+      <p>Հարցաշարը վերցված է  
+        <a href="https://www.police.am/" target="_blank" rel="noopener">Police.am</a> կայքից
+      </p>
+      <p>Բոլոր իրավունքները պաշտպանված են</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const burger = document.querySelector('.hamburger');
+      const navCont = document.querySelector('.nav-container');
+
+      burger.addEventListener('click', function() {
+        navCont.classList.toggle('open');
+        burger.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

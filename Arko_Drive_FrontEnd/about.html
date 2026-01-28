@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArkoDrive — Մեր Մասին</title>
+  <link rel="icon" href="images/DRF API (1).PNG" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/DRF API (1).PNG" alt="Arko Drive">
+      </a>
+    </div>
+
+    <!-- Гамбургер -->
+    <button class="hamburger" aria-label="Открыть меню" type="button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Контейнер меню -->
+    <nav class="nav-container">
+      <ul class="menu">
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="theory.html">Տեսական քննություններ</a></li>
+        <li><a href="tests.html">Թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային Նշաններ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero-about">
+    <img src="about-hero.jpg" alt="Մեր Մասին">
+    <div class="overlay">
+      <h1>Մեր Մասին</h1>
+    </div>
+  </section>
+
+  <!-- Մեր ավտոմեքենաները -->
+  <section class="section-cars">
+    <div class="container">
+      <h2>Մեր ավտոմեքենաները</h2>
+      <p>Կահավորված են ավտովարման դասընթացների համար անհրաժեշտ հավելյալ արգելակման ոտնակներով և հայելիներով։  
+      Բոլոր մեքենաները ապահովագրված են։  
+      Ավտոպարկը համալրված է ինչպես ավտոմատ, այնպես էլ մեխանիկական փոխանցման տուփով կառավարման մեքենաներով։</p>
+      <div class="cars-image">
+        <img src="cars.jpg" alt="Մեր ավտոպարկը">
+      </div>
+    </div>
+  </section>
+
+  <!-- Դարձնենք երթևեկությունը ավելի... -->
+  <section class="section-values">
+    <div class="container">
+      <h2>Դարձնենք երթևեկությունը ավելի</h2>
+      <div class="values-list">
+        <div class="value-item">
+          <img src="icon-safe.png" alt="Անվտանգ">
+          <h3>Անվտանգ</h3>
+        </div>
+        <div class="value-item">
+          <img src="icon-smart.png" alt="Գրագետ">
+          <h3>Գրագետ</h3>
+        </div>
+        <div class="value-item">
+          <img src="icon-reliable.png" alt="Հուսալի">
+          <h3>Հուսալի</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Մեր պատմությունն ու արժեքները -->
+  <section class="section-history">
+    <div class="container">
+      <h2>Մեր պատմությունն ու արժեքները</h2>
+      <p>«ԴՐԻՖՏ» ավտոդպրոցը հիմնադրվել է 2019 թվականին՝ անվտանգ ու ապահով երթևեկության տեսլական ունեցող մի քանի ընկերների կողմից։  
+      Հասցրել ենք տեսական գիտելիքներով և գործնական հմտություններով զինել շուրջ 4500 վարորդների, ովքեր այլևս համալրել են արհեստավարժ վարորդների շարքերը։</p>
+      <p>Թիմի աշխատանքի հիմքում արդյունավետությունն է ու հարգանքը սովորողի և նրա ժամանակի նկատմամբ:  
+      Մեր հրահանգիչները չեն վատնի Ձեր ժամանակը:</p>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="links">
+      <ul>
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+        <li><a href="theory.html">Տեսական դասընթացներ</a></li>
+      </ul>
+      <ul>
+        <li><a href="tests.html">Քննական թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային նշաներ</a></li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="copy">
+      <p>Հարցաշարը վերցված է 
+        <a href="https://www.police.am/" target="_blank" rel="noopener">Police.am</a> կայքից
+      </p>
+      <p>Բոլոր իրավունքները պաշտպանված են</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const burger = document.querySelector('.hamburger');
+      const navCont = document.querySelector('.nav-container');
+
+      burger.addEventListener('click', function() {
+        navCont.classList.toggle('open');
+        burger.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

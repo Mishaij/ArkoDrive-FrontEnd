@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArkoDrive ‒ Թեստ 1</title>
+  <link rel="icon" href="images/DRF API (1).PNG" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/test.css" />
+  <script src="js/test.js" defer></script>
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/DRF API (1).PNG" alt="Arko Drive">
+      </a>
+    </div>
+
+    <!-- Гамбургер -->
+    <button class="hamburger" aria-label="Открыть меню" type="button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Контейнер меню -->
+    <nav class="nav-container">
+      <ul class="menu">
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="theory.html">Տեսական քննություններ</a></li>
+        <li><a href="tests.html">Թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային Նշաններ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Тело теста -->
+  <section class="test-wrapper">
+    <div class="test-header">
+      <h1>Թեստ 1</h1>
+      <div id="timer">30:00</div>
+    </div>
+
+    <!-- Аnрический блок результатов, изначально скрыт -->
+    <div id="results-summary" class="hidden"></div>
+
+    <form id="test-form">
+      <!-- data-correct="true" — правильный ответ -->
+      <div class="question" data-qid="q1">
+        <h3>1. Վարորդը՝ թեքելով ղեկը, պետք է...</h3>
+        <img class="q-image" src="images/Black and White Minimalist Brand Guidelines Presentation (1) 1.png" alt="հարց 1">
+        <div class="answers">
+          <label><input type="radio" name="q1">Կտրուկ շարժվի</label>
+          <label data-correct="true"><input type="radio" name="q1">Հունց ու հարթ շարժվի</label>
+          <label><input type="radio" name="q1">Արագ ոլորի ղեկը</label>
+        </div>
+      </div>
+
+      <div class="question" data-qid="q2">
+        <h3>2. Ե՞րբ է գործում ABS համակարգը։</h3>
+        <img class="q-image" src="images/img/q2.jpg" alt="հարց 2">
+        <div class="answers">
+          <label data-correct="true"><input type="radio" name="q2">Վթարային արգելակման ժամանակ</label>
+          <label><input type="radio" name="q2">Բենզինի մակարդակը ստուգելիս</label>
+          <label><input type="radio" name="q2">Արագության սահմանափակիչի դեպքում</label>
+        </div>
+      </div>
+
+      <div class="question" data-qid="q3">
+        <h3>3. Ճանշան «Կանգ — ստուգում»-ը պարտադիր է...</h3>
+        <img class="q-image" src="images/img/q3.jpg" alt="հարց 3">
+        <div class="answers">
+          <label data-correct="true"><input type="radio" name="q3">Բոլոր մեքենաների համար</label>
+          <label><input type="radio" name="q3">Միայն բեռնատարների համար</label>
+          <label><input type="radio" name="q3">Միայն հեծանիվների համար</label>
+        </div>
+      </div>
+
+      <div class="question" data-qid="q4">
+        <h3>4. Բնակավայրում արգելված գոտու երկարությունը...</h3>
+        <img class="q-image" src="images/img/q4.jpg" alt="հարց 4">
+        <div class="answers">
+          <label><input type="radio" name="q4">5 մ</label>
+          <label data-correct="true"><input type="radio" name="q4">15 մ</label>
+          <label><input type="radio" name="q4">25 մ</label>
+        </div>
+      </div>
+
+      <div class="question" data-qid="q5">
+        <h3>5. Հանդիպակաց լուսարձակներին մոտենալիս վարորդը պետք է...</h3>
+        <img class="q-image" src="images/img/q5.jpg" alt="հարց 5">
+        <div class="answers">
+          <label data-correct="true"><input type="radio" name="q5">Փոխել մեծից փոքր լույս</label>
+          <label><input type="radio" name="q5">Միացնել վթարային ազդանշանը</label>
+          <label><input type="radio" name="q5">Արգելակել մինչև կանգ</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Ավարտել</button>
+    </form>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="links">
+      <ul>
+        <li><a href="index.html">Գլխավոր էջ</a></li>
+        <li><a href="about.html">Մեր մասին</a></li>
+        <li><a href="theory.html">Տեսական դասունք्शनներ</a></li>
+      </ul>
+      <ul>
+        <li><a href="tests.html">Քննական թեստեր</a></li>
+        <li><a href="packages.html">Փաթեթներ</a></li>
+        <li><a href="trafficsigns.html">Ճանապարհային նշաններ</a></li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="copy">
+      <p>Հարցաշարը վերցված է 
+        <a href="https://www.police.am/" target="_blank" rel="noopener">Police.am</a> կայքից
+      </p>
+      <p>Բոլոր իրավունքները պաշտպանված են</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript для гамбургера и теста -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const burger = document.querySelector('.hamburger');
+      const navCont = document.querySelector('.nav-container');
+
+      burger.addEventListener('click', function() {
+        navCont.classList.toggle('open');
+        burger.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
